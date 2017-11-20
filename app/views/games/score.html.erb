@@ -1,0 +1,13 @@
+<h1>Result</h1>
+<p>
+  <% if @result[:score] == 0 %>
+    Sorry but <strong><%= @attempt.upcase %></strong> <%= @result[:message] %>
+  <% else %>
+    <strong>Congratulations!</strong> <%= @attempt.upcase %> <%= @result[:message] %>
+  <% end %>
+  <br>
+  <br>
+  Total score: <%= session[:score] %>
+  </p>
+
+<%= link_to 'Play again', new_path %>
